@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MapDemo.MainPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Start" Margin="10,10,0,0" WidthRequest="400">
+            <Label Text="Enter Your Zip Code" FontAttributes="Bold" TextColor="Black" Margin="10" 
+                   x:Name="LblSearch" />
+            <Label Text="Zip Code" TextColor="Black" Margin="10" x:Name="LblPinCode" />
+            <StackLayout Orientation="Horizontal">
+                <Entry WidthRequest="100" x:Name="EntPinCode" Text="{Binding ZipCode, Mode=TwoWay}" />
+                <Button Text="Get Weather Data" x:Name="BtnGetWeather" Command="{Binding GetWeatherCommand}" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Show Faviorate Locations"></Label>
+                <Button Text="Faviorate Locations" Command="{Binding ShowFaviorateLocations}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

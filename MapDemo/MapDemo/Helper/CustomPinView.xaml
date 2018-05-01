@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MapDemo.Helper.CustomPinView" 
+             > 
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+                <Button Text="Faviorate" Command="{Binding FaviorateLocationCommand}" WidthRequest="120"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Longitude :"   />
+                <Label Text="{Binding PropCoord.lon}"   />
+                <Label Text="Latitude :"   />
+                <Label Text="{Binding PropCoord.lat}"   />
+            </StackLayout> 
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Temperature :"   />
+                <Label Text="{Binding PropMain.temp}"   />
+
+                <Label Text="Humidity :"  />
+                <Label Text="{Binding PropMain.humidity}" />
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Weather :"   />
+                <Label Text="{Binding PropWeather.description}"   />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Country :"   />
+                <Label Text="{Binding PropSys.country}"   />
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
